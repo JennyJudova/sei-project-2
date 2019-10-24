@@ -33,6 +33,7 @@
     "bulma": "^0.7.5",
     "dotenv-webpack": "^1.7.0",
     "express": "^4.17.1",
+    "proxy-request": "^0.1.4",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-router-dom": "^4.3.1"

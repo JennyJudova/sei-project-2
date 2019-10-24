@@ -9,9 +9,11 @@ import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
+
 import Quote from './Quote'
 import RefreshButton from './RefreshButton'
 import LondonTube from './LondonTube'
+
 
 class ShowPage extends React.Component {
   constructor() {
@@ -35,10 +37,16 @@ class ShowPage extends React.Component {
   //   if (!this.state.news && this.state.weather) return this.getNews()
   // }
 
+  // // // app.get('/myproxyroute', (req, res) => {
+  // // //   axios.get('https://restcountries.eu/rest/v2/all')
+  // // //     .then(response => res.status(200).json(response.data))
+  // // //     .catch(err => console.log(err))
+  // // // })
+
   getData() {
     const token = process.env.REACT_APP_WEATHER_ACCESS_KEY
     const city = this.props.match.params.id
-    axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${token}`)
+    axios.get(`https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${token}`) // works but takes a ton of time (`https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${token}`)
       .then(res => this.setState({ weather: res.data }, this.getNews))
       .catch(err => this.setState({ errorData: err.message })) 
   }

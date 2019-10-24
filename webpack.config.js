@@ -34,6 +34,12 @@ module.exports = {
     port: 8000,
     watchContentBase: true,
     historyApiFallback: true
+    // proxy: {
+    //   '/api/': {
+    //     target: 'http://localhost:4000',
+    //     secure: false
+    //   }
+    // }
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
