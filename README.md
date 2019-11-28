@@ -24,11 +24,13 @@ The game is deployed on Heroku and can be found at   [http://weather-and-news.he
 ## Getting Started
 Use the clone button to download the game source code. In the terminal enter the following commands:
 
-``<!— To install all the packages listed in the package.json: —>
+```<!— To install all the packages listed in the package.json: —>
 $ npm I
+
 <!— Run the app in your localhost: —>
 $ npm run serve
-<!— Check the console for any issues and if there are check the package.json for any dependancies missing  —>``
+
+<!— Check the console for any issues and if there are check the package.json for any dependancies missing  —>```
 
 ---
 ## The project
